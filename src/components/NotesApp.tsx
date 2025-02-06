@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useState} from "react";
 import Modal from "./Modal";
 
 interface Note {
@@ -37,14 +37,14 @@ const NotesApp = () => {
             // Edit existing note
             setNotes((prevNotes) =>
                 prevNotes.map((note) =>
-                    note.id === selectedNote.id ? { ...note, title, content } : note
+                    note.id === selectedNote.id ? {...note, title, content} : note
                 )
             );
         } else {
             // Add new note
             setNotes((prevNotes) => [
                 ...prevNotes,
-                { id: Date.now(), title, content },
+                {id: Date.now(), title, content},
             ]);
         }
 

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import {useEffect, useState} from "react";
 import MDEditor from "@uiw/react-md-editor";
 
 interface ModalProps {
@@ -9,7 +9,7 @@ interface ModalProps {
     isNewNote: boolean;
 }
 
-const Modal = ({ onClose, onSave, title, content, isNewNote }: ModalProps) => {
+const Modal = ({onClose, onSave, title, content, isNewNote}: ModalProps) => {
     const [noteContent, setNoteContent] = useState<string>(content);
     const [noteTitle, setNoteTitle] = useState<string>(title);
 
@@ -59,7 +59,7 @@ const Modal = ({ onClose, onSave, title, content, isNewNote }: ModalProps) => {
 
                 {/* Rich-Text Editor */}
                 <div className="p-4">
-                    <MDEditor value={noteContent} onChange={handleContentChange} />
+                    <MDEditor value={noteContent} onChange={handleContentChange}/>
                 </div>
 
                 {/* Footer */}
